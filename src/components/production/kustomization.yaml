@@ -14,6 +14,6 @@
 
 apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
-namespace: bank-of-anthos-production
+namespace: boa
 commonLabels:
   environment: production
