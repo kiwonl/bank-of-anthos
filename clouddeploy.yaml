@@ -9,7 +9,7 @@ serialPipeline:
  stages:
  - targetId: boa-dev-us
    profiles:
-   - staging
+   - development
 ---
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
