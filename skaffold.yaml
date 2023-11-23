@@ -25,14 +25,15 @@ requires:
 - configs:
   - frontend
   path: src/frontend/skaffold.yaml
-- configs:
-  - loadgenerator
-  path: src/loadgenerator/skaffold.yaml
-- configs:
-  - accounts-db
-  path: src/accounts/accounts-db/skaffold.yaml
-- configs:
-  - ledger-db
-  path: src/ledger/ledger-db/skaffold.yaml
+# change to sync from config-root (db, loadgen)
+#- configs:
+#  - loadgenerator
+#  path: src/loadgenerator/skaffold.yaml
+#- configs:
+#  - accounts-db
+#  path: src/accounts/accounts-db/skaffold.yaml
+#- configs:
+#  - ledger-db
+#  path: src/ledger/ledger-db/skaffold.yaml
 deploy:
   tolerateFailuresUntilDeadline: true
