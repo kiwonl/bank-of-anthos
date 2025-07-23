@@ -92,7 +92,7 @@ substitutions:
   _DELIVERY_PIPELINE_NAME: boa-pipeline
   _DEFAUILT_REPOSITORY: us-central1-docker.pkg.dev/${PROJECT_ID}/docker-repo
   _REGION: us-central1
-  _CACHE_URI: gs://cache-for-build/
-  _CACHE: cache
+  _CACHE_URI: gs://cache-for-build/skaffold-cache
+  _CACHE: skaffold-cache
 
 # [END cloudbuild_microservice_demo_cloudbuild]
