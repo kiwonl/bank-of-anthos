@@ -1,0 +1,27 @@
+# gcloud deploy apply --file=clouddeploy.yaml --region=us-central1 --project=PROJECT_ID
+# replace projectid of targets
+apiVersion: deploy.cloud.google.com/v1
+kind: DeliveryPipeline
+metadata:
+  name: boa-pipeline
+description: boa-pipeline
+serialPipeline:
+ stages:
+# - targetId: boa-us-c-target
+ - targetId: boa-prod
+---
+# apiVersion: deploy.cloud.google.com/v1
+# kind: Target
+# metadata:
+#   name: boa-dev
+# description: boa-dev
+# gke:
+#   cluster: projects/kiwonlee-demo-boa/locations/us-central1/clusters/boa-dev
+# ---
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: boa-prod
+description: boa-prod
+gke:
+  cluster: projects/kiwonlee-demo-boa/locations/us-central1/clusters/boa-prod
