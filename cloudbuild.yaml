@@ -30,11 +30,10 @@
 steps:
 - name: gcr.io/cloud-builders/gsutil
   id: download-skaffold-cache
+  entrypoint: 'bash'
   args:
-    - 'cp'
     - '-c'
-    - '${_CACHE_URI}'
-    - '/workspace/cache'                   # always write skaffold cache to filename cache in workspace
+    - 'gsutil cp -c ${_CACHE_URI} /workspace/cache || true'
 - name: gcr.io/k8s-skaffold/skaffold
   id: build-and-push-images
   args:
