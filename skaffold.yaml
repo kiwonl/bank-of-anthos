@@ -35,4 +35,5 @@ requires:
   - ledger-db
   path: src/ledger/ledger-db/skaffold.yaml
 deploy:
-  tolerateFailuresUntilDeadline: true
+  kubectl:
+    defaultNamespace: boa
