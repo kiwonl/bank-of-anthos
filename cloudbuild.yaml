@@ -39,6 +39,7 @@ steps:
   args:
     - skaffold
     - build
+    - '--cache-artifacts'
 #    - '--profile=gcb'
     - '--interactive=false'
     - '--default-repo=${_DEFAUILT_REPOSITORY}'
