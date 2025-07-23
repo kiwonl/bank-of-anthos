@@ -30,4 +30,6 @@ requires:
   - transactionhistory
   path: transactionhistory/skaffold.yaml
 deploy:
+  kubectl:
+    defaultNamespace: boa
   tolerateFailuresUntilDeadline: true

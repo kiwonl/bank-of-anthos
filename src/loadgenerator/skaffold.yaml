@@ -30,4 +30,5 @@ profiles:
       - k8s/overlays/development
   deploy:
     statusCheck: false
-    kubectl: {}
+    kubectl: 
+      defaultNamespace: boa

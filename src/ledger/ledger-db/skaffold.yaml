@@ -17,7 +17,8 @@ kind: Config
 metadata:
   name: ledger-db
 deploy:
-  kubectl: {}
+  kubectl: 
+    defaultNamespace: boa
 profiles:
 - name: development
   activation:

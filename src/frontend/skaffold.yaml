@@ -42,7 +42,8 @@ test:
             - "../../.pylintrc"
             - "requirements.txt"
 deploy:
-  kubectl: {}
+  kubectl: 
+    defaultNamespace: boa
   tolerateFailuresUntilDeadline: true
 profiles:
 - name: development
