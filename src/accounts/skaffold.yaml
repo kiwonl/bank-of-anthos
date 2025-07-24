@@ -27,6 +27,4 @@ requires:
   - userservice
   path: userservice/skaffold.yaml
 deploy:
-  kubectl:
-    defaultNamespace: boa
   tolerateFailuresUntilDeadline: true
