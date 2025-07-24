@@ -46,6 +46,12 @@ steps:
     - '--cache-file=/workspace/$_CACHE'   # set _CACHE to anything other than "cache" e.g. "no-cache" to reset skaffold cache
     - '--file-output=/workspace/artifacts.json'
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  id: show-artifacts-json
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - 'cat /workspace/artifacts.json'
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
   id: upload-skaffold-cache
   args:
     - 'gsutil'
