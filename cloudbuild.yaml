@@ -40,7 +40,7 @@ steps:
     - skaffold
     - build
     - '--cache-artifacts'
-#    - '--profile=gcb'
+    - '--profile=staging'
     - '--interactive=false'
     - '--default-repo=${_DEFAUILT_REPOSITORY}'
     - '--cache-file=/workspace/$_CACHE'   # set _CACHE to anything other than "cache" e.g. "no-cache" to reset skaffold cache
